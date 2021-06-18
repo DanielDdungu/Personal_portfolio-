@@ -1,7 +1,7 @@
 /* Custom properties/variables  */
 
 :root {
-    --main-white: #f0f0f0;
+    --main-white: lightgray;
     --main-red: #be3144;
     --main-blue: #45567d;
     --main-gray: #303841;
@@ -398,17 +398,222 @@ footer i {
 
 /* Style the counter cards */
 
-.card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    padding: 16px;
-    text-align: center;
-    background-color: #444;
-    color: white;
-}
-
-.fa {
-    font-size: 50px;
-}
-
 
 /* Style for skills section*/
+
+.skills-section {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 10px;
+    background: rgba(255, 255, 255, 0.08);
+    align-items: center;
+    padding: 20px;
+    position: relative;
+}
+
+.skill-box {
+    background-color: #444;
+    color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 150%;
+    justify-content: center;
+    transition: ease-in-out 0.3s;
+}
+
+.iconify {
+    width: 50px;
+    height: 50px;
+    padding-top: 0.3em;
+}
+
+.skill-box:hover {
+    background: rgba(49, 46, 46, 0.12);
+}
+
+
+/* STYLE FOR TESTIMONIAL SECTION*/
+
+.testimonial-section {
+    margin-bottom: auto;
+    margin-top: auto;
+    background: black;
+    text-align: center;
+    font-family: sans-serif;
+    color: #fefefe;
+    width: 100%;
+    height: 80vh;
+}
+
+.testimonial-container {
+    position: relative;
+    width: 320px;
+    margin: 100px auto 0 auto;
+    perspective: 1000px;
+}
+
+.carousel {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    animation: rotate360 80s infinite forwards linear;
+}
+
+.carousel__face {
+    position: absolute;
+    width: 300px;
+    height: 187px;
+    top: 20px;
+    left: 10px;
+    right: 10px;
+    background-size: cover;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+    display: flex;
+}
+
+
+/*
+background-color: #fff;
+	border-radius: 20px;
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+	overflow: hidden;
+	max-width: 100%;
+	width: 400px;
+*/
+
+span {
+    margin: auto;
+    font-size: 2rem;
+}
+
+.carousel__face:nth-child(1) {
+    background-image: url("https://images.pexels.com/photos/1141853/pexels-photo-1141853.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    transform: rotateY( 0deg) translateZ(430px);
+}
+
+.carousel__face:nth-child(2) {
+    background-image: url("https://images.pexels.com/photos/1258865/pexels-photo-1258865.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    transform: rotateY( 40deg) translateZ(430px);
+}
+
+.carousel__face:nth-child(3) {
+    background-image: url("https://images.pexels.com/photos/808466/pexels-photo-808466.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    transform: rotateY( 80deg) translateZ(430px);
+}
+
+.carousel__face:nth-child(4) {
+    background-image: url("https://images.pexels.com/photos/1394841/pexels-photo-1394841.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    transform: rotateY(120deg) translateZ(430px);
+}
+
+.carousel__face:nth-child(5) {
+    background-image: url("https://images.pexels.com/photos/969679/pexels-photo-969679.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    transform: rotateY(160deg) translateZ(430px);
+}
+
+.carousel__face:nth-child(6) {
+    background-image: url("https://images.pexels.com/photos/1834400/pexels-photo-1834400.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    transform: rotateY(200deg) translateZ(430px);
+}
+
+.carousel__face:nth-child(7) {
+    background-image: url("https://images.pexels.com/photos/1415268/pexels-photo-1415268.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    transform: rotateY(240deg) translateZ(430px);
+}
+
+.carousel__face:nth-child(8) {
+    background-image: url("https://images.pexels.com/photos/135018/pexels-photo-135018.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    transform: rotateY(280deg) translateZ(430px);
+}
+
+.carousel__face:nth-child(9) {
+    background-image: url("https://images.pexels.com/photos/1175135/pexels-photo-1175135.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    transform: rotateY(320deg) translateZ(430px);
+}
+
+@keyframes rotate360 {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(-360deg);
+    }
+}
+
+
+/*testimonial  card content*/
+
+.testimonial-body {
+    padding: 40px 40px 80px;
+}
+
+.testimonial-body p {
+    color: #555;
+    font-size: 20px;
+    line-height: 36px;
+    margin: 0;
+}
+
+.testimonial-body .fa-quote-right {
+    color: #eee;
+    font-size: 40px;
+    float: right;
+}
+
+.testimonial-footer {
+    background-color: #686de0;
+    color: #fff;
+    padding: 40px;
+    text-align: center;
+}
+
+.testimonial-footer img {
+    border-radius: 50%;
+    border: 5px solid #fff;
+    height: 120px;
+    width: 120px;
+    margin-top: -100px;
+}
+
+.testimonial-footer h3 {
+    margin: 10px 0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.testimonial-footer h4 {
+    color: #b3b5ef;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+
+/*
+.skills-section .icon-box {
+    display: grid;
+    align-items: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.08);
+    transition: ease-in-out 0.3s;
+}
+
+.skills-section .icon-box span {
+    font-size: 32px;
+    padding-right: 10px;
+    line-height: 1;
+}
+
+.skills-section.icon-box h3 {
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    font-size: 16px;
+    color: #fff;
+}
+
+.skills-section .icon-box:hover {
+    background: rgba(255, 255, 255, 0.12);
+}
+*/
